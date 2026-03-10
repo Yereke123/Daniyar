@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --orlik-copper: #c76d29;
+  --text-white: #ffffff;
+  --text-gray: #d1d5db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: url('images/bh.jpg') center/cover no-repeat fixed;
+  background-color: #171a1f;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Разрешаем вертикальную прокрутку, если карточка не влезает */
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.avatar-wrapper {
+  width: 130px; /* Размер фото */
+  height: 130px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border: 3px solid var(--orlik-copper); /* Оранжевая рамка */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+
+  /* ИЗМЕНЕНО: Скругление как у карточки, но чуть меньше для гармонии */
+  border-radius: 20px; 
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-text {
+  margin-bottom: 20px;
+}
+
+/* ИМЯ СДЕЛАНО БЕЛЫМ */
+#personName {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.brand-text h1 {
+  color: var(--text-white);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.brand-text p {
+  color: var(--orlik-copper);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background-color: var(--orlik-copper);
+  color: var(--text-white);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pill-btn:active {
+  transform: scale(0.97);
+  background-color: #b35e20;
+}
+
+.card-social {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.social-item {
+  text-decoration: none;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.social-item i {
+  font-size: 2.2rem; /* КРУПНЫЕ ИКОНКИ */
+  color: var(--orlik-copper);
+}
+
+.social-item span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-gray);
+}
+
+
+
